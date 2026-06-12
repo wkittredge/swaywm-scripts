@@ -3,7 +3,7 @@
 Toggle floating for the focused Sway container.
 
 Containers in the ignore set are skipped unless --force is passed.
-Explicityly disabling floating on a sticky container will also disable
+Explicitly disabling floating on a sticky container will also disable
 sticky. By default, the keybinding mode is left to a helper script for
 updaing; pass --force-keybinging-mode to set it immediately.
 
