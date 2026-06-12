@@ -1,6 +1,6 @@
 #!/home/will/.config/sway/scripts/venv/bin/python3
 """
-Pseudo config file containing information used by other scripts.
+Pseudo config file containing constants used by other scripts.
 
 Note:
     The shebang may need updating to match your virtual environment.
