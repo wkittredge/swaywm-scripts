@@ -32,11 +32,11 @@ See the table below for a summary of the use case for each script. Use run each 
 
 To give a few examples of what these scripts do for me in the above screenshot:
 - `watcher.py` detects that the focused window is floating, and automatically sets the **[F]** binding mode.
-- `watcher.py` sees that the `grep` terminal should have automatically controlled opacity, and dims it when not focused.
-- `snap_position.py` automatically makes the `tail` terminal floating and positions it in the bottom-right when commanded.
-- `toggle-bar.py` enabled made the bottom bar visible and moved the `tail` terminal up to avoid overlap.
+- `watcher.py` sees that the grep terminal should have automatically controlled opacity, and dims it when not focused.
+- `snap_position.py` automatically makes the tail terminal floating and positions it in the bottom-right when commanded.
+- `toggle-bar.py` made the bottom bar visible and moved the tail terminal up to avoid overlap.
 - Recent commands from `focus_ws.py` and `move_ws.py` were executed and logged while moving workspaces and containers around.
-- `resize_compass.py` determined that the `tail` terminal should grow from/shrink towards the bottom-right corner when I resized it.
+- `resize_compass.py` determined that the tail terminal should grow from/shrink towards the bottom-right corner when I resized it.
 
 # Installation
 
