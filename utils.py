@@ -173,7 +173,7 @@ def build_command(command: str, containers: list[object]=None) -> str:
 
     Batching commands into a single IPC call is significantly faster
     than issuing a call for every operation you want to make. This
-    expects each container to receive an indentical command.
+    expects each container to receive an identical command.
     """
     if containers is None:
         return command
