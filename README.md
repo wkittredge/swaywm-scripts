@@ -59,7 +59,7 @@ pip3 install i3ipc
 curl -L https://patch-diff.githubusercontent.com/raw/altdesktop/i3ipc-python/pull/200.patch | patch -p1 -d venv/lib/python*/site-packages/
 deactivate
 
-# clone the repositry
+# clone the repository
 git clone https://github.com/wkittredge/swaywm-scripts.git .
 
 # modify the shebangs (be careful if there are other files in the directory)
