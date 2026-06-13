@@ -47,7 +47,8 @@ Feel free to use a different installation method if you want—this is just what
 The shebang at the start of each script is `#!/home/will/.config/sway/scripts/venv/bin/python3`, so **the easiest way to get things working will probably be something like this:**
 ```
 # make directory and cd
-mkdir -p ~/.config/sway/scripts/ && cd "$_"
+mkdir -p ~/.config/sway/scripts
+cd ~/.config/sway/scripts
 
 # create and activate the virtual environment
 python3 -m venv ./venv
