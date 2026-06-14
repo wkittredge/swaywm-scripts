@@ -58,7 +58,7 @@ if __name__ == '__main__':
     # floating containers need explicit repositioning
     if obj.type == 'floating_con':
 
-        con = Container(conn=conn)
+        con = Container(conn=conn, container=obj)
         outputs = conn.get_outputs()
         existing_workspaces = [ws.num for ws in workspaces]
 
@@ -87,7 +87,7 @@ if __name__ == '__main__':
             cmd = f'[con_id="{con.id}"] move container to workspace number {args.workspace}, focus'
     
         # position the window correctly
-        if args.center or output is None:
+        if args.center:
             cmd = f'{cmd}, move position center'
         else:
             x, y = con.new_position(output)

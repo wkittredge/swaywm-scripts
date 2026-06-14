@@ -75,7 +75,7 @@ if __name__ == '__main__':
             args.unit = 'px'
 
         # if the container is growing, then we might need to modify the resize amount
-        if args.operation == 'grow':
+        if args.operation == 'grow' and (args.max or args.enclose):
             dist = con.dist_to_side(args.direction)
             if args.max:
                 args.amount = max(0, dist)
