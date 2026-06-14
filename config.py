@@ -39,7 +39,7 @@ STICKY_ENABLE = f'sticky enable, title_format "[󰐃] %title", {TITLE_ENABLE}'
 STICKY_DISABLE = 'sticky disable, title_format "%title"'
 BAR_ENABLE = 'bar mode dock'
 BAR_DISABLE = 'bar mode invisible'
-OPACITY_AUTO_DIM = 'opacity set 0.2'
+OPACITY_AUTO_DIM = 'opacity set 0.25'
 OPACITY_AUTO_RESTORE = 'opacity set 1'
 
 # windows that should not be allowed to toggle floating (unless forced)
