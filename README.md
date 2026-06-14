@@ -28,7 +28,7 @@ See the table below for a summary of the use case for each script. Use run each 
 
 ## Screenshot
 
-![Sway window manager screenshot.](https://imgur.com/a/qsdkG7U)
+![Sway window manager screenshot.](https://i.imgur.com/lds8R5G.png)
 
 To give a few examples of what these scripts do for me in the above screenshot:
 - `watcher.py` detects that the focused window is floating, and automatically sets the **[F]** binding mode.
