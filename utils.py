@@ -25,7 +25,7 @@ from sys import argv
 def search_config(conn: object, regex: str) -> list:
     """Recursively search Sway config(s) for regex matches."""
     config = conn.get_config().config
-    visited = set()
+    searched = set()
     
     def expand_path(_path: str) -> str:
         return path.expandvars(path.expanduser(_path.strip()))
@@ -34,8 +34,8 @@ def search_config(conn: object, regex: str) -> list:
         matches = findall(regex, text, MULTILINE)
         for include in findall(r'^include\s+(.+)$', text, MULTILINE):
             for _path in glob(expand_path(include)):
-                if _path not in visited:
-                    visited.add(_path)
+                if _path not in searched:
+                    searched.add(_path)
                     with open(_path, 'r') as f:
                         matches += search(f.read())
         return matches

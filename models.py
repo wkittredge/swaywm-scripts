@@ -111,7 +111,8 @@ class Output(IPC):
         o = self._conn.get_tree().find_by_id(self.id)
         containers = [c for c in o.descendants() if c.ipc_data['type'] in {'con','floating_con'}]
         for c in containers:
-            if c.ipc_data['focused']: return Container(conn=self._conn, container=c)
+            if c.ipc_data['focused']:
+                return Container(conn=self._conn, container=c)
         return None
 
     def neighbors(self) -> list[object]:
@@ -255,7 +256,8 @@ class Workspace(IPC):
         ws = self._conn.get_tree().find_by_id(self.id)
         containers = [c for c in ws.descendants() if c.ipc_data['type'] in {'con','floating_con'}]
         for c in containers:
-            if c.ipc_data['focused']: return Container(conn=self._conn, container=c)
+            if c.ipc_data['focused']:
+                return Container(conn=self._conn, container=c)
         return None
 
 
@@ -448,21 +450,25 @@ class Container(IPC):
         Decide a container's position on an output.
 
         Provide a direction to signal that the container is aligned with
-        a workspace edge, and should be mirrored to the corresponding
+        a workspace edge, and should be mirrored to the neighboring
         edge of the given output.
         """
         current_output = self.output()
         workspace = output.workspace()
+        # output.workspace() will not necessarily be the same workspace as the one the
+        # container lands on, but this is fine/works because we know the geometry will be
+        # the same for all workspaces on the output.
 
         # same output or size: direct positioning
-        if output.id == current_output.id or (output._ipc.ipc_data['rect'] == current_output._ipc.ipc_data['rect']):
+        if output.id == current_output.id or (output.width == current_output.width and \
+        output.height == current_output.height):
             x, y = self.x, self.y
 
         # same aspect ratio: scaled positioning
         elif output.width / output.height == current_output.width / current_output.height:
             scale = workspace.width / current_output.workspace().width
-            x = int(self.x * scale)
-            y = int(self.y * scale)
+            x = int(self.x*scale)
+            y = int(self.y*scale)
 
         # different aspect ratio: centered positioning
         else:
