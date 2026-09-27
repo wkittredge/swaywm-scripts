@@ -115,7 +115,7 @@ if __name__ == '__main__':
         # The container that receives focus after moving also appears to depend on things
         # like the layout of the container that was moved and the workspace that it was
         # moved to. The old version of this script checked how many nodes existed and walked
-        # focus down and back up with 'focus child' and 'focus parent' commands, but this is feels
+        # focus down and back up with 'focus child' and 'focus parent' commands, but this feels
         # kind of hacky. There might be a better solution. Maybe container marks could work?
 
     # run command and exit

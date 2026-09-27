@@ -6,7 +6,7 @@ I use most of these scripts every day as part of my Sway window manager workflow
 
 # Usage
 
-See the table below for a summary of the use case for each script. Use run each script with `--help` to get more information about the options from argparse. More details are also available in source code docstrings and comments.
+See the table below for a summary of the use case for each script. Run each script with `--help` to get more information about the options from argparse. More details are also available in source code docstrings and comments.
 
 | Script | Description |
 | --- | --- |
@@ -34,8 +34,8 @@ To give a few examples of what these scripts do for me in the above screenshot:
 - `watcher.py` detects that the focused window is floating, and automatically sets the **[F]** binding mode.
 - `watcher.py` dims the bottom-right grep and top-right yolk terminals when not focused.
 - `snap_position.py` automatically made the bottom-right grep terminal floating and positioned it when commanded.
-- `toggle-bar.py` made the bottom bar visible and moved the bottom-right grep terminal up to avoid overlap.
-- `toggle-sticky.py` made the tail terminal floating and updated the title when commanded.
+- `toggle_bar.py` made the bottom bar visible and moved the bottom-right grep terminal up to avoid overlap.
+- `toggle_sticky.py` made the tail terminal floating and updated the title when commanded.
 - `move_con.py` logged some recently-executed movement commands visible in the tail terminal.
 
 # Installation
